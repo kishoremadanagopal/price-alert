@@ -1,0 +1,45 @@
+# ===========================================
+# Price Alert Config — edit this freely
+# ===========================================
+# Add/remove assets as you like.
+# Get tickers from Yahoo Finance (https://finance.yahoo.com).
+#
+# Common tickers:
+#   Gold futures:     GC=F
+#   Silver futures:   SI=F
+#   Platinum:         PL=F
+#   Copper:           HG=F
+#   Crude oil:        CL=F
+#   Bitcoin (USD):    BTC-USD
+#   Ethereum (USD):   ETH-USD
+#   Apple stock:      AAPL
+#   S&P 500 ETF:      SPY
+#   NASDAQ ETF:       QQQ
+#
+# `drop_below` is the price at which you want to be alerted.
+
+# Hours to wait before re-alerting on the same asset (avoid spam).
+# If gold stays below your threshold, you'll get at most one alert per this many hours.
+cooldown_hours: 6
+
+assets:
+  - name: Gold
+    ticker: GC=F
+    drop_below: 2000      # USD per ounce
+
+  - name: Silver
+    ticker: SI=F
+    drop_below: 25        # USD per ounce
+
+  - name: Apple
+    ticker: AAPL
+    drop_below: 180
+
+  - name: Tesla
+    ticker: TSLA
+    drop_below: 200
+
+  # Add more:
+  # - name: Bitcoin
+  #   ticker: BTC-USD
+  #   drop_below: 50000
